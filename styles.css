@@ -1,0 +1,237 @@
+/* FONTES */
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Text:wght@200..700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&family=Momo+Trust+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Text:wght@200..700&display=swap');
+
+/* VARIÁVEIS */
+
+:root {
+    --cor-primaria: rgb(41, 41, 41);
+    --cor-secundaria: rgb(233,20,20);
+    --cor-tercearia: rgba(53, 53, 53, 0.568);
+    --cor-destaque: black;
+    --espaçamento: 1.8rem;
+    --font-primaria: 'Heebo';
+    --font-secundaria: 'Open Sans';
+    --font-tercearia: 'Roboto';
+}
+
+/* MODIFICANDO CONFIGURAÇÕES NATIVAS */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* NAV BAR */
+
+.nav-bar {
+    position: fixed;
+    display: flex;
+    top: 0;
+    z-index: 99;
+    margin-top: 1rem;
+    width: 100%;
+    height: 10vh;
+}
+
+.lado-esquerdo {
+    position: fixed;
+    left: 0;
+    margin-left: 6.3rem;
+}
+
+.lado-direito {
+    display: flex;
+    position: fixed;
+    right: 0;
+    margin-right: 6.3rem;
+    gap: 5rem;
+}
+
+.lado-direito a {
+    text-decoration: none;
+    color: var(--cor-tercearia);
+    font-family: var(--font-primaria);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.lado-direito a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* HERO */
+
+.container {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 11rem;
+    gap: 2rem;
+}
+
+.text {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.text h1 {
+    font-size: 4.3rem;
+    font-family: var(--font-primaria);
+    font-weight: 400;
+    color: var(--cor-primaria);
+    line-height: 1.2;
+}
+
+.text h1 span {
+    font-weight: 700;
+    color: var(--cor-destaque);
+}
+
+.text p {
+    font-family: var(--font-tercearia);
+    color: var(--cor-tercearia);
+}
+
+.text button {
+    width: 12rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--cor-secundaria);
+    border: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.text button:hover {
+    transform: scale(0.9);
+}
+
+.text button a {
+    text-decoration: none;
+    font-family: var(--font-primaria);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* MEDIA QUERIES - RESPONSIVIDADE */
+
+@media screen and (max-width: 1400px) {
+
+.lado-esquerdo img {
+    width: 100px;
+}
+
+.imagem img {
+    width: 500px;
+}
+
+.text h1 {
+    font-size: 3rem;
+}
+}
+
+@media screen and (max-width: 1000px) {
+
+.lado-esquerdo {
+    margin-left: 1rem;
+}
+
+.lado-direito {
+    margin-right: 1.8rem;
+    gap: 1rem;
+}
+
+.lado-direito a {
+    font-size: 0.9rem;
+}
+
+.lado-esquerdo img {
+    width: 100px;
+}
+
+.imagem img {
+    width: 300px;
+}
+
+.text {
+    width: 500px;
+}
+
+.text h1 {
+    font-size: 2rem;
+}
+
+.text p {
+    font-size: 0.8rem;
+}
+
+.text button {
+    width: 9rem;
+    padding: 0.5rem;
+}
+
+.text button a {
+    font-size: 1rem;
+}
+}
+
+@media screen and (max-width: 728px) {
+
+.container {
+    margin-left: 3rem;
+    }
+
+.lado-esquerdo {
+    margin-left: 0.2rem;
+}
+
+.lado-direito {
+    margin-right: 1rem;
+    gap: 0.8rem;
+}
+
+.lado-direito a {
+    font-size: 0.7rem;
+}
+
+.lado-esquerdo img {
+    width: 80px;
+}
+
+.imagem img {
+    width: 200px;
+}
+
+.text h1 {
+    font-size: 2rem;
+}
+
+.text p {
+    font-size: 0.6rem;
+}
+
+.text button {
+    width: 6.5rem;
+    padding: 0.5rem;
+}
+
+.text button a {
+    font-size: 0.7rem;
+}
+}
